@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromakey Technology Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .container {
+        text-align : center;
+        margin : 0 auto;
+        width : 60%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chromakey Technology Blog</h1>
+    </header>
+    <main>
+        <article>
+            <h2>The Magic of Chromakey Technology</h2>
+            <p>Chromakey, also known as green screen technology, is a fascinating method used in film, television, and photography to replace a specific color (usually green or blue) with another image or video.</p>
+            <p>This technology allows creators to place their subjects in any environment imaginable, from ancient castles to outer space, without leaving the studio. It has revolutionized the way visual effects are produced, making it possible to create scenes that would have been prohibitively expensive or even impossible to shoot on location.</p>
+            <p>One of the key advantages of chromakey technology is its versatility. With a green screen and some editing software, creators can transport audiences to far-off lands, simulate dangerous stunts, or even interact with fictional creatures. The only limit is the imagination of the creator.</p>
+            <p>Chromakey technology works by isolating the color range of the backdrop, removing it digitally, and replacing it with a different image or video. This process involves precise color keying and careful adjustment to ensure that the foreground subject blends seamlessly with the new background.</p>
+            <p>From Hollywood blockbusters to independent films and YouTube tutorials, chromakey technology has become an essential tool for content creators worldwide. It allows filmmakers and photographers to tell stories in innovative ways, enhancing the viewer's experience and pushing the boundaries of visual storytelling.</p>
+            <p>While chromakey technology has democratized the creation of visual effects, it also requires skill and creativity to use effectively. Achieving realistic results requires attention to detail, lighting control, and post-production expertise.</p>
+            <p>In conclusion, chromakey technology has transformed the way we create and consume visual media. It has opened up new possibilities for storytelling, allowing creators to transport audiences to worlds beyond imagination. As technology continues to evolve, we can only imagine the incredible feats that chromakey will make possible in the future.</p>
+        </article>
+    </main>
+    <div class="container">
+    <h1>Add Your Blog</h1>
+<form id="blogForm">
+    <label for="blogTitle">Title:</label><br>
+    <input type="text" id="blogTitle" name="blogTitle" required><br><br>
+    <label for="blogURL">URL:</label><br><br>
+    <input type="url" id="blogURL" name="blogURL" required><br><br>
+    <button type="submit">Submit</button><br><br>
+</form>
+
+<div id="blogList">
+   
+</div>
+</div>
+
+<script>
+document.getElementById('blogForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var title = document.getElementById('blogTitle').value;
+    var url = document.getElementById('blogURL').value;
+    var blogEntry = `<div><a href="${url}">${title}</a></div>`;
+    document.getElementById('blogList').innerHTML += blogEntry;
+});
+</script>
+</body>
+</html>

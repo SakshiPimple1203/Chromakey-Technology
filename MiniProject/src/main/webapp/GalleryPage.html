@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+         .container{
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .box{
+        margin: 0 10px;
+        box-shadow: 0 0 20px 2px rgba(0,0,0..1);
+    }
+    .box :hover{
+            transition: 1s;
+            transform: scale(1.3);
+            z-index: 2;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 7px;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            color: black;
+        }
+        h3{
+            font: 1em sans-serif;
+            font-size: xx-large;
+            text-align: center;
+        }
+        #upload{
+            width: 200px;
+            height: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Chromakey Technology Gallery</h1>
+    </header>
+</body>
+</html>
+
+
+    <h2>Chromakey Gallery</h2>
+    <div class="container">
+        <div class="box">
+            <img src="download (1).jpeg" width="450">
+        </div>
+        <div class="box">
+            <img src="download.jpeg" width="450">
+        </div>
+        <div class="box">
+            <img src="Gallery.jpg" width="450">
+        </div>
+    </div>
+        <div class="container">
+                <div class="box">
+                    <img src="images (1).jpeg" width="450">    
+                </div>
+                <div class="box">
+                    <img src="gn7p8ckdyhx81.jpg" width="450">
+                </div>        
+        </div>
+        <h3>Add Yours Image for chromakey Technology</h3>
+        <input type="file" id="upload" accept="image/*" onchange="previewImage(event)">
+        <div id="preview"></div>
+        <script>
+          function previewImage(event) {
+            var input = event.target;
+            var reader = new FileReader();
+            
+            reader.onload = function() {
+              var img = document.createElement("img");
+              img.src = reader.result;
+              document.getElementById("preview").innerHTML = '';
+              document.getElementById("preview").appendChild(img);
+            };
+            
+            reader.readAsDataURL(input.files[0]);
+          }
+        </script>  
+</body>
+</html>
